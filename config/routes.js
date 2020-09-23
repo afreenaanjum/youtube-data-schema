@@ -7,5 +7,9 @@ router.post("/youtube", youtubeController.createYoutubeDoc);
 router.delete("/youtube/:id", youtubeController.deleteYoutubeDoc);
 
 router.post("/analytics", analyticsController.createAnalyticsDoc);
+router.get(
+  "/analyticsByDay/:storeId/:smyd/:emyd",
+  analyticsController.getAnalyticsDocByDay
+);
 
 module.exports = router;
